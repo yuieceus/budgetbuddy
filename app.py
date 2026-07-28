@@ -112,11 +112,11 @@ def respond(message, history):
     messages.append({"role": "user", "content": message})
 
     response = client.chat_completion(
-    messages=messages,
-    max_tokens=50,
-    temperature=0.3,
-    top_p=0.8
-)
+        messages=messages,
+        max_tokens=200,
+        temperature=1.5,
+        top_p=0.3
+    )
     return response.choices[0].message.content.strip()
 
 chatbot = gr.ChatInterface(respond)
