@@ -101,8 +101,11 @@ def respond(message, history):
     Knowledge:
     {rag_info}
     """    
-    messages = [{"role": "system", "content": system_message}]
-
+    messages = [
+    {"role": "system", "content": system_message},
+    {"role": "user", "content": "What is Kode with Klossy?"},
+    {"role": "assistant", "content": "Kode with Klossy is a program that teaches coding and technology skills to students."}
+    ]
     if history:
         messages.extend(history)
 
