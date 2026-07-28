@@ -89,8 +89,18 @@ client = InferenceClient("Qwen/Qwen2.5-7B-Instruct")
 def respond(message, history):
     
     rag_info = get_top_chunks(message, chunk_embeddings, cleaned_chunks)
-    system_message = f"You are a friendly chatbot who uses {rag_info} to answer questions about Kode with Klossy."
-    
+    system_message = f"""
+    You are KodeBot, a friendly chatbot.
+
+    Use ONLY the information below to answer questions.
+    If the answer is not in the information, say:
+    "I don't know based on the provided knowledge."
+
+    Keep your answer under 40 words.
+
+    Knowledge:
+    {rag_info}
+    """    
     messages = [{"role": "system", "content": system_message}]
 
     if history:
@@ -99,10 +109,11 @@ def respond(message, history):
     messages.append({"role": "user", "content": message})
 
     response = client.chat_completion(
-        messages,
-        max_tokens=200
-    )
-
+    messages=messages,
+    max_tokens=50,
+    temperature=0.3,
+    top_p=0.8
+)
     return response.choices[0].message.content.strip()
 
 chatbot = gr.ChatInterface(respond)
