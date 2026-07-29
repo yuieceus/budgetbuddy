@@ -90,7 +90,7 @@ def respond(message, history):
     
     rag_info = get_top_chunks(message, chunk_embeddings, cleaned_chunks)
     system_message = f"""
-    You are KodeBot, a friendly chatbot.
+    You are BudgetBuddy, a friendly chatbot.
 
     Use ONLY the information below to answer questions.
     If the answer is not in the information, say:
@@ -128,9 +128,9 @@ with gr.Blocks() as chatbot:
     textbox= gr.Textbox(placeholder="Share Your Budget Or Ask Me Anything!"),
     description = "A smart chatbot that combines budgeting and mental wellness to help you spend mindfully, save better, and stress less!",
     examples = ["I get $500 per month, can you make me a budget?", 
-                "I keep buying things when I'm stressed!",
-                "Help me save for a new phone!",
-                "How can I save more?”]
+                "I keep buying things when I'm stressed. What should I do?",
+                "I spent $40 on food and $60 on clothes. Can you analyze it?",
+                "How can I save more?"]
                     )
 
 
