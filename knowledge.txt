@@ -1,14 +1,31 @@
-Kode With Klossy creates learning experiences and opportunities for young women and gender expansive youth. 
-Our programs ignite a spark that fuels our scholars’ agency to pursue their passions in a tech-driven world. 
-Technology has incredible power to change and influence the way we live our lives and the way we work. 
-This is only becoming more and more true as innovation is happening faster and on a wider scale than ever before.
-Unfortunately, the culture of technology tends to encourage only some identities; and access to education and opportunities is not equitable. 
-We are here to combat that. 
-We want to make sure that young people everywhere have the opportunity to wield the power of technology and pursue bright futures in STEAM.
-Our instructional teams are at the heart of our learning experience. 
-Through training and ongoing support, these educators are armed with the tools they need to create a powerful experience for our scholars. 
-Our alumni are the future leaders in technology. 
-Kode With Klossy provides continued support on their coding journey, far beyond their time in our programs. 
-Kode With Klossy programs are free. 
-Kode With Klossy scholars are curious, community-minded, creative individuals who want to explore the possibilities of technology. 
-We welcome all applicants who identity as young women and gender expansive, ages 13-18 -- regardless of CS experience.
+Budget Buddy is a chatbot that helps teens build healthier relationships with money. It combines budgeting tools with mental wellness strategies to help users understand not only where their money goes, but also why they make certain spending decisions. The goal is to encourage mindful spending, reduce financial stress, and build lasting money habits.
+Budgeting is simply creating a plan for how you will use your money. Having a budget doesn't mean you can never buy fun things. Instead, it helps you balance spending, saving, and future goals so you can make confident financial decisions.
+Tracking your spending is one of the easiest ways to improve your finances. Recording purchases helps you see where your money is going and makes it easier to identify habits that you may not have noticed before.
+Many people are surprised to learn how quickly small purchases add up. Buying a snack, a coffee, or a game every few days may not seem expensive at first, but these purchases can become a significant expense over time.
+Budget Buddy automatically sorts purchases into categories such as food, shopping, transportation, entertainment, education, savings, and personal care. Organizing expenses makes it easier to understand which areas of your budget take up the most money.
+One of the most important financial skills is learning the difference between needs and wants. Needs are things that are necessary for daily life, while wants are things that are enjoyable but not essential. Recognizing the difference helps people make more thoughtful spending decisions.
+A popular budgeting strategy is the 50/30/20 rule. This guideline recommends spending about 50% of your income on needs, 30% on wants, and saving the remaining 20%. While everyone's situation is different, this rule provides a helpful starting point.
+Budget Buddy can also create personalized budgets based on a user's income, spending habits, and financial goals. As users build better habits, the chatbot can adjust recommendations to better fit their lifestyle and priorities.
+Saving money becomes much easier when you have a specific goal. Whether you're saving for a new phone, concert tickets, college expenses, or a vacation, having a clear purpose makes it easier to stay motivated.
+Breaking large savings goals into smaller weekly or monthly targets can make them feel much more achievable. Instead of focusing on one large amount, you can celebrate steady progress over time.
+An emergency fund is money set aside for unexpected expenses. Even small contributions made consistently can help prepare you for surprises without disrupting your budget.
+Many spending decisions are influenced by emotions rather than actual needs. Feelings like stress, boredom, excitement, or sadness can affect how people choose to spend their money without them realizing it.
+Stress spending happens when someone shops to temporarily cope with difficult emotions. Although buying something new may provide short-term comfort, it often doesn't solve the problem that caused the stress in the first place.
+Impulse buying refers to making purchases without planning ahead. Sales, advertisements, and limited-time offers often encourage quick decisions that people later regret. Taking time to think before buying can reduce impulse purchases.
+One simple strategy for avoiding impulse buying is the 24-hour rule. Before purchasing something that isn't necessary, wait one full day. Giving yourself time to think often helps you decide whether you truly want the item.
+Fear of Missing Out, commonly called FOMO, can also influence spending. People sometimes buy products because their friends own them or because something is popular online. Asking yourself whether you would still want the item if no one else had it can help you make more independent decisions.
+Social media often encourages spending by showing carefully selected images of expensive lifestyles, vacations, and products. Remember that these posts rarely show the complete picture, so comparing yourself to others can lead to unnecessary purchases.
+Budget Buddy allows users to record their mood alongside each purchase. Tracking emotions such as happiness, stress, boredom, or excitement can help identify patterns between feelings and spending habits.
+Recognizing emotional spending patterns makes it easier to replace unhealthy habits with healthier alternatives. Instead of shopping after a stressful day, someone might choose to exercise, read, listen to music, spend time with friends, or try another activity that helps them relax.
+Before making a purchase, Budget Buddy encourages users to pause and ask themselves a few questions. Is this something I need or simply want? Does it fit within my budget? Will buying it delay one of my financial goals? These questions encourage thoughtful decision-making.
+Money anxiety is common, especially among teenagers and young adults who are beginning to manage their own finances. Breaking financial goals into smaller steps can make money feel less overwhelming and more manageable.
+Feeling guilty after spending money is also common. Instead of focusing on regret, it's more productive to reflect on what happened, learn from the experience, and make different choices in the future.
+Financial confidence develops gradually through practice. Learning how to budget, save money, and track expenses helps people feel more comfortable making financial decisions over time.
+Building good financial habits is more important than making perfect financial decisions. Consistently saving, budgeting, and tracking expenses creates habits that become easier with repetition.
+One helpful strategy is to save money before spending it. Setting aside part of your paycheck or allowance first makes it easier to reach long-term goals instead of trying to save whatever is left over.
+Budget Buddy analyzes spending trends over time to provide personalized insights. For example, if shopping consistently becomes your highest spending category or if restaurant spending increases each month, the chatbot can suggest realistic ways to rebalance your budget.
+The chatbot also celebrates positive financial habits. Reaching savings milestones, staying within a budget, or reducing unnecessary spending are all examples of progress worth recognizing. Celebrating small successes helps build motivation and confidence.
+Everyone makes financial mistakes from time to time. Overspending, forgetting to save, or making impulse purchases are learning experiences rather than failures. Reflecting on these experiences helps build stronger financial habits for the future.
+Learning about money is a lifelong process. No one is expected to understand budgeting, saving, investing, or financial planning immediately. Asking questions, practicing regularly, and staying curious are important parts of becoming financially responsible.
+Budget Buddy is designed to be supportive rather than judgmental. Instead of criticizing spending decisions, it offers encouragement, practical advice, and realistic suggestions that help users improve one step at a time.
+Unlike many traditional budgeting apps that focus only on numbers and charts, Budget Buddy also considers the emotions and behaviors behind spending. By combining financial education with mental wellness, it helps users become more mindful, confident, and intentional with their money.
