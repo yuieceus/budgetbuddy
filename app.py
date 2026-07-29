@@ -131,18 +131,31 @@ def respond(message, history):
 
 custom_css = """
 .right-top-bar {
-    position: absolute !important;
-    top: 20px;
-    right: 20px;
-    display: flex !important;
-    gap: 8px !important;
-    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
 .right-top-bar button {
     background-color: var(--btn-bg, #2F4F3E) !important;
     color: white !important;
     border-radius: 20px !important;
+    border: none !important;
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+}
+
+.message.user {
+    background-color: #F3F4F6 !important;
+    color: #1F2937 !important;
+    border: 1px solid #E5E7EB !important;
+}
+
+.message.bot {
+    background-color: #FFFFFF !important;
+    color: #1F2937 !important;
+    border: 1px solid #E5E7EB !important;
 }
 """
 
