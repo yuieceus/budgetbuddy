@@ -207,20 +207,20 @@ with gr.Blocks(theme=sage_theme, css=custom_css) as chatbot:
             "How can I save more?"
         ]
     )
-        with gr.Row():
-            gr.HTML(
-                """
-                <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/track/6xsOIolcDvXCHyJkpWJVuk?utm_source=generator&theme=0&si=4c9098d8178441da"
-                        width="100%"
-                        height="152"
-                        frameBorder="0"
-                        allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy">
-                </iframe>
-                """
-            )
+    with gr.Row():
+        gr.HTML(
+            """
+            <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/6xsOIolcDvXCHyJkpWJVuk?utm_source=generator&theme=0&si=4c9098d8178441da"
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+            </iframe>
+            """
+        )
 chatbot.launch()
 # TODO: This is just a starting point! Customize the system prompt,
 # the model, and the interface to make this project your own!
