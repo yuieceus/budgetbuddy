@@ -96,7 +96,7 @@ def respond(message, history):
     If the answer is not in the information, say:
     "I don't know based on the provided knowledge."
 
-    Keep your answer under 40 words.
+    Keep your answer under 100 words.
 
     Knowledge:
     {rag_info}
@@ -125,7 +125,7 @@ with gr.Blocks() as chatbot:
     
     gr.ChatInterface(respond,
     title = "Hi, I'm BudgetBuddy!💵",
-    textbox= gr.Textbox(placeholder="Share Your Budget Or Ask Me Anything!"),
+    textbox= gr.Textbox(placeholder="Share Your Budget or Ask Me Anything!"),
     description = "A smart chatbot that combines budgeting and mental wellness to help you spend mindfully, save better, and stress less!",
     examples = ["I get $500 per month, can you make me a budget?", 
                 "I keep buying things when I'm stressed. What should I do?",
