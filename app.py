@@ -181,7 +181,7 @@ with gr.Blocks(theme=sage_theme, css=custom_css) as chatbot:
             placeholder="Share your budget or ask me anything!"
         ),
         description="A smart chatbot that combines budgeting and mental wellness to help you spend mindfully, save better, and stress less!
-        Disclaimer: “This chatbot is not a licensed therapist or financial advisor and is not intended to provide professional mental health care or personalized financial advice.”",
+        Disclaimer: This chatbot is not a licensed therapist or financial advisor and is not intended to provide professional mental health care or personalized financial advice.",
         examples=[
             "I get $500 per month, can you make me a budget?",
             "I keep buying things when I'm stressed. What should I do?",
