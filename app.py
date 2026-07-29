@@ -119,128 +119,113 @@ def respond(message, history):
     )
     return response['choices'][0]['message']['content'].strip() 
 
-
 with gr.Blocks() as chatbot:
     gr.Image("BudgetBuddy_Image_Header1.png", show_label=False)
-    
-    gr.ChatInterface(respond,
-    title = "Hi, I'm BudgetBuddy!💵",
-    textbox= gr.Textbox(placeholder="Share Your Budget or Ask Me Anything!"),
-    description = "A smart chatbot that combines budgeting and mental wellness to help you spend mindfully, save better, and stress less!",
-    examples = ["I get $500 per month, can you make me a budget?", 
-                "I keep buying things when I'm stressed. What should I do?",
-                "I spent $40 on food and $60 on clothes. Can you analyze it?",
-                "How can I save more?"]
-                    )
 
-
-chatbot.launch()
-
-
-###########################################################
-#               EXTRA FEATURES - BudgetBuddy
-###########################################################
-
-import random
-import datetime
-
-# -------------------------
-# Budget Tips
-# -------------------------
-
-budget_tips = [
-    "Save before you spend.",
-    "Track every purchase, even the small ones.",
-    "Needs come before wants.",
-    "Use the 24-hour rule before buying something expensive.",
-    "Create one savings goal each month.",
-    "Avoid shopping when you're stressed.",
-    "Compare prices before making purchases.",
-    "Small daily savings become big yearly savings.",
-    "Always keep a small emergency fund.",
-    "Review your budget once every week."
-]
-
-def random_tip():
-    return f"💡 **Today's Budget Tip**\n\n{random.choice(budget_tips)}"
-
-
-# -------------------------
-# Daily Saving Challenge
-# -------------------------
-
-saving_challenges = [
-    "💰 Save $5 today.",
-    "🚫 Buy nothing that isn't necessary today.",
-    "🥤 Skip buying one drink and save the money.",
-    "🍱 Bring food from home today.",
-    "🪙 Put every coin you receive into savings.",
-    "📒 Track every purchase you make today.",
-    "🛍️ Avoid online shopping for 24 hours.",
-    "🚶 Walk instead of paying for transportation if possible.",
-    "📚 Read one article about personal finance.",
-    "🎯 Move $10 into your savings account."
-]
-
-def random_challenge():
-    return random.choice(saving_challenges)
-
-
-# -------------------------
-# Achievement Badges
-# -------------------------
-
-badges = {
-    "🌱 Beginner Saver":
-        "Started learning about budgeting!",
-
-    "💰 Money Tracker":
-        "Tracked your expenses consistently!",
-
-    "🎯 Goal Chaser":
-        "Reached a savings milestone!",
-
-    "🧠 Mindful Spender":
-        "Reduced impulse purchases!",
-
-    "🏆 Budget Master":
-        "Stayed within budget for a whole month!"
-}
-
-def show_badges():
-    text = ""
-
-    for badge, desc in badges.items():
-        text += f"### {badge}\n{desc}\n\n"
-
-    return text
-
-
-# -------------------------
-# Money Journal
-# -------------------------
-
-journal_entries = []
-
-def save_journal(entry):
-
-    if entry.strip() == "":
-        return "Please write something first."
-
-    today = datetime.date.today()
-
-    journal_entries.append(
-        f"{today} : {entry}"
+    gr.ChatInterface(
+        respond,
+        title="Hi, I'm BudgetBuddy!💵",
+        textbox=gr.Textbox(
+            placeholder="Share Your Budget or Ask Me Anything!"
+        ),
+        description="A smart chatbot that combines budgeting and mental wellness to help you spend mindfully, save better, and stress less!",
+        examples=[
+            "I get $500 per month, can you make me a budget?",
+            "I keep buying things when I'm stressed. What should I do?",
+            "I spent $40 on food and $60 on clothes. Can you analyze it?",
+            "How can I save more?"
+        ]
     )
 
-    return "✅ Journal entry saved!"
+    ###########################################################
+    #               EXTRA FEATURES - BudgetBuddy
+    ###########################################################
 
+    import random
+    import datetime
 
-# -------------------------
-# Financial Resources
-# -------------------------
+    # -------------------------
+    # Budget Tips
+    # -------------------------
 
-resources = """
+    budget_tips = [
+        "Save before you spend.",
+        "Track every purchase, even the small ones.",
+        "Needs come before wants.",
+        "Use the 24-hour rule before buying something expensive.",
+        "Create one savings goal each month.",
+        "Avoid shopping when you're stressed.",
+        "Compare prices before making purchases.",
+        "Small daily savings become big yearly savings.",
+        "Always keep a small emergency fund.",
+        "Review your budget once every week."
+    ]
+
+    def random_tip():
+        return f"💡 **Today's Budget Tip**\n\n{random.choice(budget_tips)}"
+
+    # -------------------------
+    # Daily Saving Challenge
+    # -------------------------
+
+    saving_challenges = [
+        "💰 Save $5 today.",
+        "🚫 Buy nothing that isn't necessary today.",
+        "🥤 Skip buying one drink and save the money.",
+        "🍱 Bring food from home today.",
+        "🪙 Put every coin you receive into savings.",
+        "📒 Track every purchase you make today.",
+        "🛍️ Avoid online shopping for 24 hours.",
+        "🚶 Walk instead of paying for transportation if possible.",
+        "📚 Read one article about personal finance.",
+        "🎯 Move $10 into your savings account."
+    ]
+
+    def random_challenge():
+        return random.choice(saving_challenges)
+
+    # -------------------------
+    # Achievement Badges
+    # -------------------------
+
+    badges = {
+        "🌱 Beginner Saver": "Started learning about budgeting!",
+        "💰 Money Tracker": "Tracked your expenses consistently!",
+        "🎯 Goal Chaser": "Reached a savings milestone!",
+        "🧠 Mindful Spender": "Reduced impulse purchases!",
+        "🏆 Budget Master": "Stayed within budget for a whole month!"
+    }
+
+    def show_badges():
+        text = ""
+
+        for badge, desc in badges.items():
+            text += f"### {badge}\n{desc}\n\n"
+
+        return text
+
+    # -------------------------
+    # Money Journal
+    # -------------------------
+
+    journal_entries = []
+
+    def save_journal(entry):
+
+        if entry.strip() == "":
+            return "Please write something first."
+
+        today = datetime.date.today()
+
+        journal_entries.append(f"{today} : {entry}")
+
+        return "✅ Journal entry saved!"
+
+    # -------------------------
+    # Financial Resources
+    # -------------------------
+
+    resources = """
 ## 📚 Financial Resources
 
 ### Budget Templates
@@ -267,12 +252,11 @@ resources = """
 • PocketGuard
 """
 
+    # -------------------------
+    # Emergency Help
+    # -------------------------
 
-# -------------------------
-# Emergency Help
-# -------------------------
-
-emergency_help = """
+    emergency_help = """
 ## 🚨 Emergency Financial Help
 
 ### Student Financial Aid
@@ -290,5 +274,104 @@ If debt becomes overwhelming, contact a certified nonprofit financial counselor.
 Speak with your school's financial aid office or a trusted financial advisor before making major financial decisions.
 """
 
+    ###########################################################
+# DISPLAY EXTRA FEATURES
+###########################################################
+
+gr.Markdown("---")
+gr.Markdown("# 🌟 BudgetBuddy Extras")
+gr.Markdown(
+    "Explore helpful tools and resources to build smarter money habits!"
+)
+
+# -----------------------
+# Budget Tip
+# -----------------------
+
+with gr.Accordion("💡 Budget Tip of the Day", open=False):
+
+    tip_output = gr.Markdown()
+
+    tip_button = gr.Button("Generate Today's Tip")
+
+    tip_button.click(
+        fn=random_tip,
+        outputs=tip_output
+    )
+
+# -----------------------
+# Saving Challenge
+# -----------------------
+
+with gr.Accordion("🎯 Daily Saving Challenge", open=False):
+
+    challenge_box = gr.Textbox(
+        label="Today's Challenge",
+        interactive=False
+    )
+
+    challenge_button = gr.Button("Generate Challenge")
+
+    challenge_button.click(
+        fn=random_challenge,
+        outputs=challenge_box
+    )
+
+# -----------------------
+# Achievement Badges
+# -----------------------
+
+with gr.Accordion("🏆 Achievement Badges", open=False):
+
+    badge_output = gr.Markdown()
+
+    badge_button = gr.Button("Show Badges")
+
+    badge_button.click(
+        fn=show_badges,
+        outputs=badge_output
+    )
+
+# -----------------------
+# Money Journal
+# -----------------------
+
+with gr.Accordion("📖 Money Journal", open=False):
+
+    journal_input = gr.Textbox(
+        lines=5,
+        placeholder="Write about today's spending..."
+    )
+
+    save_button = gr.Button("Save Entry")
+
+    journal_status = gr.Textbox(
+        label="Status",
+        interactive=False
+    )
+
+    save_button.click(
+        fn=save_journal,
+        inputs=journal_input,
+        outputs=journal_status
+    )
+
+# -----------------------
+# Financial Resources
+# -----------------------
+
+with gr.Accordion("📚 Financial Resources", open=False):
+
+    gr.Markdown(resources)
+
+# -----------------------
+# Emergency Help
+# -----------------------
+
+with gr.Accordion("🚨 Emergency Financial Help", open=False):
+
+    gr.Markdown(emergency_help)
+
+chatbot.launch()
 # TODO: This is just a starting point! Customize the system prompt,
 # the model, and the interface to make this project your own!
