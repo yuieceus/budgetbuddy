@@ -113,7 +113,7 @@ def respond(message, history):
 
     response = client.chat_completion(
         messages=messages,
-        max_tokens=200,
+        max_tokens=300,
         temperature=1.5,
         top_p=0.3
     )
