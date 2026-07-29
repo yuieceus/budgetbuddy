@@ -117,7 +117,7 @@ def respond(message, history):
         temperature=1.5,
         top_p=0.3
     )
-    return response.choices[0].message.content.strip()
+    return response['choices'][0]['message']['content'].strip() 
 
 
 with gr.Blocks() as chatbot:
