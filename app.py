@@ -130,7 +130,7 @@ with gr.Blocks() as chatbot:
     examples = ["I get $500 per month, can you make me a budget?", 
                 "I keep buying things when I'm stressed",
                 "Help me save for a new phone"]
-                          )
+                    )
 
 
 chatbot.launch()
