@@ -123,7 +123,7 @@ def respond(message, history):
 with gr.Blocks() as chatbot:
     gr.Image("BudgetBuddy_Image_Header.png", show_label=False)
     
-    gr.ChatInterface(respond, type = "messages",
+    gr.ChatInterface(respond,
     title = "Hi, I'm BudgetBuddy! 💵",
     textbox= gr.Textbox(placeholder="Share Your Budget Or Ask Me Anything!"),
     description = "A smart chatbot that combines budgeting and mental wellness to help you spend mindfully, save better, and stress less!",
