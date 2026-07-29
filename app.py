@@ -1,8 +1,63 @@
+import random
 import gradio as gr
 from huggingface_hub import InferenceClient
 from sentence_transformers import SentenceTransformer
 import torch
 from theme import sage_theme, ocean_theme, cherry_theme
+#The three extra features
+saving_challenges = [
+    "💰 Save $5 today in your emergency jar.",
+    "🚫 Buy nothing non-essential today.",
+    "📒 Log every single purchase you make today.",
+    "🥤 Skip buying a drink/snack today and save the cash.",
+    "🍱 Pack food or snacks from home instead of buying out.",
+    "🛍️ Avoid browsing shopping apps for 24 hours.",
+    "🎯 Transfer $10 straight into your savings account."
+]
+
+def random_challenge():
+    return random.choice(saving_challenges)
+
+def update_streak(current_streak, logged_today):
+    if logged_today == "Yes (Only essential needs)":
+        new_streak = current_streak + 1
+        return new_streak, f"🔥 **Awesome! Your streak is now {new_streak} day(s)!**"
+    else:
+        return 0, "🔄 **Streak reset.** Habit building takes practice. Start fresh tomorrow!"
+
+resources_markdown = """
+## 📚 Financial Resources & Useful Tools
+
+### 🌐 Educational Websites
+* **[Investopedia](https://www.investopedia.com):** Direct definitions and beginner financial guides.
+* **[Khan Academy Financial Literacy](https://www.khanacademy.org/college-careers-more/financial-literacy):** Free interactive courses on budgeting, banking, and consumer credit.
+* **[Practical Money Skills](https://www.practicalmoneyskills.com):** Financial games, budget calculators, and downloadable student guides.
+
+### 📱 Helpful Budgeting Apps
+* **[Goodbudget](https://goodbudget.com):** Envelope-style budgeting tool ideal for visual spenders.
+* **[Splitwise](https://www.splitwise.com):** Easily manage and split group expenses with friends.
+"""
+
+emergency_markdown = """
+## 🚨 Emergency Financial Help & Direct Support
+
+### 🎓 Student Aid & Academic Hardship
+* **[Federal Student Aid (FAFSA)](https://studentaid.gov)**
+  * *Website:* [studentaid.gov](https://studentaid.gov)
+  * *Contact:* **1-800-4-FED-AID** (1-800-433-3243)
+  * *Info:* Guidance on federal grants, scholarships, work-study programs, and student aid eligibility.
+
+### 📞 Debt Counseling & Financial Stress
+* **[National Foundation for Credit Counseling (NFCC)](https://www.nfcc.org)**
+  * *Website:* [nfcc.org](https://www.nfcc.org)
+  * *Toll-Free Helpline:* **1-800-388-2227**
+  * *Info:* Free and low-cost non-profit counseling for managing debt and financial stress.
+
+### 🆘 Mental Health & Crisis Support
+* **[Crisis Text Line](https://www.crisistextline.org)**
+  * *Contact:* Text **HOME** to **741741** (Free, 24/7, Confidential)
+  * *Info:* Instant text support if money anxiety or emotional stress becomes overwhelming.
+"""
 
 with open("knowledge.txt", "r", encoding="utf-8") as file:
     
