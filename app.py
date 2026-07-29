@@ -122,9 +122,9 @@ def respond(message, history):
 
     response = client.chat_completion(
         messages=messages,
-        max_tokens=300,
-        temperature=1.5,
-        top_p=0.3
+        max_tokens=200,
+        temperature=0.7,
+        top_p=0.9
     )
     return response['choices'][0]['message']['content'].strip() 
 
