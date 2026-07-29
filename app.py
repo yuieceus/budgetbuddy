@@ -2,6 +2,7 @@ import gradio as gr
 from huggingface_hub import InferenceClient
 from sentence_transformers import SentenceTransformer
 import torch
+from theme import sage_theme, ocean_theme, cherry_theme
 
 with open("knowledge.txt", "r", encoding="utf-8") as file:
   # Read the entire contents of the file and store it in a variable "r" shows that we're gonna open this in read mode
@@ -128,8 +129,56 @@ def respond(message, history):
     )
     return response['choices'][0]['message']['content'].strip() 
 
-with gr.Blocks() as chatbot:
+custom_css = """
+.right-top-bar {
+    position: absolute !important;
+    top: 20px;
+    right: 20px;
+    display: flex !important;
+    gap: 8px !important;
+    z-index: 1000;
+}
+
+.right-top-bar button {
+    background-color: var(--btn-bg, #2F4F3E) !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+"""
+
+with gr.Blocks(theme=sage_theme, css=custom_css) as chatbot:
     gr.Image("BudgetBuddy_Image_Header1.png", show_label=False)
+
+    with gr.Row(elem_classes=["right-top-bar"]):
+        btn_sage = gr.Button("🌿 Sage Garden")
+        btn_ocean = gr.Button("🌊 Ocean Breeze")
+        btn_cherry = gr.Button("🌸 Cherry Blossom")
+
+        btn_sage.click(
+        fn=None, 
+        js="""() => { 
+            document.body.style.backgroundColor = '#F7FBF5'; 
+            document.documentElement.style.setProperty('--btn-bg', '#2F4F3E');
+        }"""
+    )
+
+    
+        btn_ocean.click(
+        fn=None, 
+        js="""() => { 
+            document.body.style.backgroundColor = '#F0F8FF'; 
+            document.documentElement.style.setProperty('--btn-bg', '#1E3A8A');
+        }"""
+    )
+
+    
+        btn_cherry.click(
+        fn=None, 
+        js="""() => { 
+            document.body.style.backgroundColor = '#FFF5F7'; 
+            document.documentElement.style.setProperty('--btn-bg', '#831843');
+        }"""
+    )
 
     gr.ChatInterface(
         respond,
