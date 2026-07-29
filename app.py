@@ -206,7 +206,7 @@ with gr.Blocks(theme=sage_theme, css=custom_css) as chatbot:
             "I spent $40 on food and $60 on clothes. Can you analyze it?",
             "How can I save more?"
         ]
-
+    )
         with gr.Row():
         gr.HTML(
             """
