@@ -192,9 +192,11 @@ custom_css = """
 }
 
 .message.bot {
-    background-color: #FFFFFF !important;
+    background: #EEF7EC !important;
     color: #1F2937 !important;
-    border: 1px solid #E5E7EB !important;
+    border: none !important;
+    border-radius: 18px !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,.05);
 }
 """
 
