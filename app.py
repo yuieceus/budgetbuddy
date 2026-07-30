@@ -246,9 +246,31 @@ with gr.Blocks(theme=sage_theme, css=custom_css) as chatbot:
             "How can I save more?"
         ]
     )
+    gr.Markdown("---")
+    gr.Markdown("### 🎯 Daily Saving Challenge")
+    challenge_box = gr.Textbox(label="Your Challenge", value=random_challenge, interactive=False)
+    btn_new_challenge = gr.Button("🎲 Get Another Challenge")
+    btn_new_challenge.click(fn=random_challenge, outputs=challenge_box)
     
-    with gr.Row():
-        gr.HTML(
+    gr.Markdown("---")
+    gr.Markdown("### 🔥 Daily Habit Tracker")
+    streak_count = gr.State(value=0)
+    logged_radio = gr.Radio(
+        choices=["Yes (Only essential needs)", "No (Made non-essential purchases)"],
+        label="Did you stick to essential spending today?"
+    )
+    btn_streak = gr.Button("Log Today's Progress")
+    streak_output = gr.Markdown()
+    btn_streak.click(fn=update_streak, inputs=[streak_count, logged_radio], outputs=[streak_count, streak_output])
+    
+    gr.Markdown("---")
+    gr.Markdown(resources_markdown)
+    
+    gr.Markdown("---")
+    gr.Markdown(emergency_markdown)
+    
+    gr.Markdown("---")
+    gr.HTML(
             """
             <iframe style="border-radius:12px"
                     src="https://open.spotify.com/embed/track/6xsOIolcDvXCHyJkpWJVuk?utm_source=generator&theme=0&si=4c9098d8178441da"
