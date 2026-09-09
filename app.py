@@ -129,7 +129,10 @@ def get_top_chunks(query, chunk_embeddings, text_chunks):
       
     # Return the list of most relevant chunks
   return top_chunks
-client = InferenceClient("Qwen/Qwen2.5-7B-Instruct")
+client = InferenceClient(
+    model="Qwen/Qwen2.5-7B-Instruct",
+    token=os.environ.get("HF_TOKEN")
+)
 
 def respond(message, history):
     rag_info = get_top_chunks(message, chunk_embeddings, cleaned_chunks)
