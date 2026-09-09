@@ -1,3 +1,4 @@
+import os
 import random
 import gradio as gr
 from huggingface_hub import InferenceClient
@@ -286,6 +287,9 @@ with gr.Blocks(theme=sage_theme, css=custom_css) as chatbot:
             """
         )
         
-chatbot.launch()
+chatbot.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 7860))
+)
 # TODO: This is just a starting point! Customize the system prompt,
 # the model, and the interface to make this project your own! 
